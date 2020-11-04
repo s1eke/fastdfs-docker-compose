@@ -26,4 +26,4 @@ for i in $(seq 1 ${#STORAGE_IDS_LIST[@]});do echo "10000$i   group1  ${STORAGE_I
 fi
 /etc/init.d/fdfs_trackerd start
 /etc/init.d/fdfs_storaged start
-tail -f ${FDFS_WORKDIR}/tracker/logs/trackerd.log
+tail -f ${FDFS_WORKDIR}/logs/trackerd.log
