@@ -20,7 +20,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     libxslt-dev \
     openssl-dev \
     geoip-dev \
-    python2 
+    python2 \
+    telnet \
+    vim
 
 
 ADD package/* ${HOME}/
