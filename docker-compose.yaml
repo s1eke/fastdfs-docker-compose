@@ -9,10 +9,13 @@ services:
             - FDFS_WORKDIR=/var/local/fdfs
             - TRACKER_SERVER=192.168.0.229:22122,192.168.0.228:22122
             - STORAGE_IDS=192.168.0.229,192.168.0.228
+            - SERVER_IP=192.168.0.229
         volumes:
             - ${HOME}/docker-data/fdfs:/var/local/fdfs
         ports:
             - '22122:22122'
+            - '8888:8888'
+            - '23000:23000'
         # 使docker具有root权限以读写主机上的目录    
         privileged: true
         # 网络模式为host，即直接使用主机的网络接口
